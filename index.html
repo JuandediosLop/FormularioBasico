@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario CAS  | 📄 </title>
+
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="https://kit.fontawesome.com/42e7f98aa1.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    
+    <div class="loader-container">
+        <div class="loader"></div>
+    </div>
+    <div class="main">
+        <div class="contact">
+           
+          
+            <form action="" id="userDataForm"  >
+                <h2 class="title">Formulario de datos usuario</h2>
+                
+                <div class="form-group">
+                    <div>
+                        <label for="dpi">DPI</label>
+                        <input type="number" name="dpi" id="dpi" class="form-control" min="0" required placeholder="Ingresa un DPI valido" onkeypress="return event.charCode>=48 && event.charCode<=57">
+                    </div>
+                    
+                    <div>
+                        <label for="email">Email</label>
+                        <input type="email" name="email" id="email" class="form-control" required placeholder="Ingresa tu correo electronico">
+                        
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <div>
+                        <label for="name">Nombre</label>
+                        <input type="text" name="name" id="name" class="form-control" minlength="3" required placeholder="Ingresar tu nombre" onkeypress="return check(event)" >
+                      
+             
+                    </div>
+                    <div>
+                        <label for="lastname">Apellido</label>
+                        <input type="text" name="lastname" id="lastname" class="form-control" required placeholder="Ingresa tu apellido" onkeypress="return check(event)" >
+                    </div>
+                  
+                    
+                </div>
+              
+                    
+                <div class="form-group">
+                    <div>
+                        <label for="phone">Teléfono</label>
+                        <input type="number" name="phone" id="phone" class="form-control" required placeholder="Ingresa tu número de teléfono" onkeypress="return event.charCode>=48 && event.charCode<=57">
+                    </div>
+                    <div>
+                        <label for="address">Dirección</label>
+                        <input type="text" name="address" id="address" class="form-control" required placeholder="Ingresa tu dirección">
+                    </div>
+                    
+                </div>
+                <div class="form-group">
+                    <div>
+                        <label for="birthdate">Fecha de nacimiento</label>
+                        <input type="date" name="birthdate" id="birthdate" class="form-control" required>
+                    </div>
+                    <div>
+                        <label for="age">Edad</label>
+                        <input type="number" name="age" id="age" class="form-control" readonly disabled placeholder="Se calcula automatico">
+                    </div>
+                    
+                </div>
+
+                <div class="form-group">
+                    <div>
+                        <label for="gender">Genero</label>
+                        <select name="gender" id="gender" class="form-control" >
+
+                            <option value=""  selected hidden disabled >Seleccione</option>
+                            
+                            <option id="2">Masculino</option>
+                            
+                            <option id="3">Femenino</option>
+
+                            <option id="4">Prefiero no especificar</option>
+                            
+                        </select>
+                    </div>
+                    <div>
+                        <label for="photo">Foto</label>
+                        <input type="file" name="photo" id="photo" class="form-control" 
+                    accept="image/png, image/jpeg, image/jpg" required>
+                        <label  class="custom-file-upload " for="photo"> Clic para elegir archivo</label>
+                    </div>
+                    
+                </div>
+
+                <div class="form-group btn">
+              
+                    <button id="submit" class="btn btn-primary" onclick="validar()">Enviar</button>
+                </div>
+            </form>
+            <i class="fa-thin fa-message-exclamation"></i>
+
+        </div>
+    </div>
+
+
+    <div id="modal_container" class="modal-container">
+        <div class="modal">
+          <h2 id="modal_title"></h2>
+          <p id="modal_message">
+            
+          </p>
+          <button id="close">Cerrar</button>
+        </div>
+    </div>
+
+</body>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="./assets/js/app.js"></script>
+    <script src="./assets/js/animacion.js"></script>
+    <script src="./assets/js/validar.js"></script>
+    <script src="./assets/js/mostrarDatos.js"></script>
+</html>

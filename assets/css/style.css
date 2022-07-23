@@ -1,0 +1,213 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500;700&display=swap');
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+body{
+    background-color: #010326;
+   
+}
+.main{
+
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact{
+    margin-top: 10vw;
+    width: 600px;
+    height: 550px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #F2F2F2;
+    border-radius: 30px;
+    box-shadow: -1px -1px 12px 5px rgba(1,11,64,0.78);
+    -webkit-box-shadow: -1px -1px 12px 5px rgba(1,11,64,0.78);
+    -moz-box-shadow: -1px -1px 12px 5px rgba(1,11,64,0.78);
+}
+
+.title{
+    margin-top: 20px;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    color: #1A2E40;
+    text-align: center;
+}
+
+#userDataForm{
+    width: 600px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    color: #000;
+    font-weight: 300;
+    font-size: 20px;
+}
+
+.form-group{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: 5px;
+    color: #010B40;
+}
+.form-group div{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.form-group label{
+    margin-bottom: 5px;
+}
+.form-group input, .form-group select{
+    width: 100%;
+    height: 40px;
+    border-radius: 5px;
+    border: 1px solid #010B40;
+    padding: 0 8px;
+    font-size: 1rem;
+    font-weight: 300;
+    color: #010B40;
+}
+
+.modal-container {
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.3);
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    pointer-events: none;
+    opacity: 0;  
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    transition: opacity 0.3s ease;
+  }
+  
+  .show {
+    pointer-events: auto;
+    opacity: 1;
+  }
+  
+  .modal {
+    background-color: #fff;
+    width: 400px;
+    max-width: 100%;
+    padding: 30px 50px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    text-align: center;
+  }
+  
+  .modal h2 {
+    margin: 0;
+    margin-bottom: 10px;
+  }
+  
+  .modal p {
+    opacity: 0.7;
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+
+  .modal p i{
+    font-size: 1.5rem;
+    width: 100%;
+    height: auto;
+    color: #010B40;
+  }
+  button {
+    background-color: #1B8EF2;
+    border: 0;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    color: #fff;
+    font-size: 14px;
+    padding: 10px 25px;
+    cursor: pointer;
+  }
+
+  .btn{
+    margin-top: 10px;
+    width: 100%;
+    height: 40px;
+    border-radius: 8px;
+    border: none;
+    font-weight: 700;
+    cursor: pointer;  
+    align-items: center;
+    justify-content: center; 
+    }
+
+    .btn button{
+        background-color: #1B8EF2;
+        width: 50%;
+        font-weight: 700 ;
+        color: #fff;
+        font-size: 18px;
+    }
+    input[type="file"] {
+        display: none;
+    }
+
+    .custom-file-upload {
+        border: 1px solid #010B40;
+        display: inline-block;
+        padding: 8px 12px;
+        cursor: pointer;
+        font-size: 1rem;
+        font-weight: 300;
+        color: #010B40;
+        border-radius: 5px;
+        width: 100%;
+        height: 40px; 
+        background-color: #fff;
+    }
+
+    .loader-container {
+        height: 100%;
+        width: 100%;
+        background-color: #000;
+        position: fixed;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .loader{
+      width: 50px;
+      height: 50px;
+      border: 5px solid;
+      color: #1B8EF2;
+      border-radius: 50%;
+      border-top-color: transparent;
+      animation: loader 1.2s linear infinite;
+    }
+
+    @keyframes loader {
+      25% {
+        color: green;
+      }
+      50% {
+        color: yellow;
+      }
+      75% {
+        color: red;
+      }
+      to{
+        transform: rotate(360deg);
+      }
+    }
